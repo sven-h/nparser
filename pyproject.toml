@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=66.0.0", "wheel", "Cython>=0.29.34"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nparser"  # as it would appear on PyPI
+version = "0.0.1"
+description = "Parser for ntriples"
+license = {file = "LICENCE"}
+authors = [
+  { name="Sven Hertling", email="sven@informatik.uni-mannheim.de" },
+]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+homepage = "https://github.com/sven-h/nparser"
+repository = "https://github.com/sven-h/nparser"
+"Bug Tracker" = "https://github.com/sven-h/nparser/issues"
