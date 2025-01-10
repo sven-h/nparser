@@ -1,0 +1,8 @@
+<one> <two> "three" .
+<a> <b> <c> .
+<four> <five> _:six .
+<four> <five> _:six .
+_:seven <eight> _:nine .
+
+_:seven <eight> _:nine .
+_:seven <eight> _:nine .
