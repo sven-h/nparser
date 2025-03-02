@@ -82,3 +82,17 @@ Those triples can be parsed by the library but are not conformant to the specifi
 # No relative IRIs in N-Triples
 <http://example/s> <http://example/p> <o> .
 ```
+
+
+
+
+### Comparison to other libraries in Python
+
+There are also other libraries which parse n triples in python.
+The most well known library is [RDFLib](https://github.com/RDFLib/rdflib) which usually has not very performant parsers.
+Other library is [serd](https://github.com/drobilla/serd) (and the python binding [python-serd](
+)) which is based in C and thus faster.
+An advantage is that also other formats than n-triples can be parsed.
+Another library is [lightrdf](https://github.com/ozekik/lightrdf) with the disadvantage that the type cannot easily be determined (if it is a literal, resource, blank node etc).
+
+### Comparison to other libraries in Java

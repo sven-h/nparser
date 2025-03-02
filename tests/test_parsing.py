@@ -65,6 +65,8 @@ def test_blank_node_beginning(ntriple):
     assert obj.value == 'three'
 
 
+
+
 # negatives tests
 
 @pytest.mark.parametrize("ntriple", [b'.', b'_', b'__'])
@@ -72,3 +74,13 @@ def test_empty_line(ntriple):
     with pytest.raises(ValueError):
         parsed_list = list(parse(io.BytesIO(ntriple)))
 
+
+@pytest.mark.parametrize("ntriple", [b'<first> <second> <third', b'<first> <second> <third         '])
+def test_no_closing_resource(ntriple):
+    with pytest.raises(ValueError):
+        parsed_list = list(parse(io.BytesIO(ntriple)))
+
+@pytest.mark.parametrize("ntriple", [b'<first> <second> "f', b'<first> <second> "f     '])
+def test_no_closing_literal(ntriple):
+    with pytest.raises(ValueError):
+        parsed_list = list(parse(io.BytesIO(ntriple)))

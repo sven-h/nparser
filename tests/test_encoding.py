@@ -37,7 +37,7 @@ def test_encoding(file_path):
     assert obj.value == 'six'
     
     #third triple
-    sub, pred, obj = actual_triples[1]
+    sub, pred, obj = actual_triples[2]
     
     assert type(sub) == BNode
     assert type(pred) == Resource

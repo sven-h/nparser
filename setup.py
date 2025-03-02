@@ -10,5 +10,5 @@ ext = '.pyx' if Cython else '.c'
 extensions = [Extension("nparser._nparser", ["src/nparser/_nparser"+ext])]
 
 setup(
-    ext_modules = Cython.Build.cythonize(extensions) if Cython else extensions
+    ext_modules = Cython.Build.cythonize(extensions) if Cython else extensions # , compiler_directives={'language_level' : "3"}
 )
